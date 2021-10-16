@@ -10,7 +10,7 @@ export const useStyles = isScrollable => makeStyles(theme => createStyles({
         flexGrow: 1,
     },
     appbar: {
-        backgroundColor: !isScrollable?'transparent':theme.palette.primary.dark,
+        backgroundColor: !isScrollable?theme.palette.common.white:theme.palette.primary.dark,
         boxShadow: !isScrollable?'none':'0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)',
         zIndex: theme.zIndex.drawer+1
     },
@@ -58,7 +58,6 @@ export const useStyles = isScrollable => makeStyles(theme => createStyles({
         fontSize: 30
     },
     rootC: {
-        maxWidth: 345,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -82,4 +81,14 @@ export const useStyles = isScrollable => makeStyles(theme => createStyles({
         paddingBottom: '16px'
     },
     Toolbar: theme.mixins.toolbar,
+    actions: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center'
+    },
+    button: {
+        marginRight: theme.spacing(2),
+        marginBottom: theme.spacing(1)
+    }
 }));
